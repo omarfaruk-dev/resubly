@@ -4,7 +4,7 @@ import "@/global.css"
 import Feather from "@expo/vector-icons/Feather"
 import { styled } from "nativewind"
 import { useState } from "react"
-import { Image, ImageSourcePropType, Pressable, ScrollView, Text, View } from 'react-native'
+import { Image, ImageSourcePropType, Pressable, ScrollView, Text, TouchableOpacity, View } from 'react-native'
 import { SafeAreaView as RNSafeAreaView } from "react-native-safe-area-context"
 
 const SafeAreaView = styled(RNSafeAreaView)
@@ -55,13 +55,13 @@ const Settings = () => {
   const [biometricEnabled, setBiometricEnabled] = useState(false)
 
   return (
-    <SafeAreaView className="flex-1 bg-background">
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#fff9e3' }} className="p-6">
       <ScrollView
         className="flex-1"
         contentContainerStyle={{ paddingBottom: 40 }}
         showsVerticalScrollIndicator={false}
       >
-        <Text className="settings-title">Settings</Text>
+        <Text className="tabs-title">Settings</Text>
 
         {/* Profile Card */}
         <View className="settings-profile-card">
@@ -70,9 +70,9 @@ const Settings = () => {
             <Text className="settings-profile-name">{HOME_USER.name}</Text>
             <Text className="settings-profile-email">{HOME_USER.email}</Text>
           </View>
-          <Pressable className="settings-edit-button">
+          <TouchableOpacity className="settings-edit-button">
             <Text className="text-primary text-lg"><Feather name="edit" size={24} color="black" /></Text>
-          </Pressable>
+          </TouchableOpacity>
         </View>
 
         {/* Account Section */}
@@ -139,9 +139,6 @@ const Settings = () => {
         <Pressable className="settings-logout-button">
           <Text className="settings-logout-text">Log Out</Text>
         </Pressable>
-
-        {/* Version */}
-        <Text className="settings-version">Version 1.0.0</Text>
       </ScrollView>
     </SafeAreaView>
   )
