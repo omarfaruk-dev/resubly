@@ -7,7 +7,7 @@ import { StatusBar } from 'expo-status-bar'
 
 const Onboarding = () => {
   return (
-    <SafeAreaView className="flex-1 bg-[#ea7a53]">
+    <SafeAreaView  className="flex-1 bg-accent">
       <StatusBar style="light" />
       
       {/* Pattern Background Section */}

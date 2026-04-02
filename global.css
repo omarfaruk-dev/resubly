@@ -226,8 +226,11 @@
         @apply py-4 text-sm font-sans-medium text-black/60;
     }
 
+    /* ── Auth: Screen & Scaffold ── */
+    /* ── Auth: Screen & Scaffold ── */
     .auth-safe-area {
-        @apply flex-1 bg-background;
+        @apply flex-1;
+        background-color: #fff9e3;
     }
 
     .auth-screen {
@@ -239,43 +242,51 @@
     }
 
     .auth-content {
-        @apply grow px-5 pb-10 pt-8;
+        @apply grow px-6 pb-10;
     }
 
+    /* ── Auth: Header (centered horizontal: icon | brand text) ── */
     .auth-brand-block {
-        @apply mt-2 items-center;
+        @apply mt-9 mb-11 flex-row items-center justify-center;
     }
 
     .auth-logo-wrap {
-        @apply mb-7 flex-row items-center gap-3;
+        @apply flex-row items-center gap-3.5;
     }
 
     .auth-logo-mark {
-        @apply relative size-14 items-center justify-center rounded-2xl bg-accent;
+        @apply size-[60px] items-center justify-center rounded-2xl bg-accent;
     }
 
     .auth-logo-mark-text {
-        @apply text-2xl font-sans-extrabold text-background;
+        @apply text-[28px] font-sans-bold text-background leading-[34px];
     }
 
     .auth-wordmark {
-        @apply text-3xl font-sans-extrabold text-primary;
+        @apply text-[26px] font-sans-bold text-primary tracking-[0.2px];
     }
 
     .auth-wordmark-sub {
-        @apply -mt-1 text-xs font-sans-semibold uppercase tracking-[1px] text-muted-foreground;
+        @apply mt-0.5 text-[11px] font-sans-semibold uppercase tracking-widest text-primary opacity-55;
     }
 
+    /* ── Auth: Title block ── */
     .auth-title {
-        @apply text-3xl font-sans-bold text-primary;
+        @apply text-[30px] font-sans-bold text-primary text-center mb-2;
     }
 
     .auth-subtitle {
-        @apply mt-2 max-w-[320px] text-center text-base font-sans-medium text-muted-foreground;
+        @apply text-[15px] font-sans text-center leading-[22px] text-primary opacity-55;
     }
 
+    /* ── Auth: Form Card ── */
     .auth-card {
-        @apply mt-8 rounded-3xl border border-border bg-card p-5;
+        @apply mt-7 rounded-3xl border-[1.5px] border-border bg-card p-6 gap-4;
+        shadow-color: #000;
+        shadow-offset: 0px 4px;
+        shadow-opacity: 0.05;
+        shadow-radius: 12px;
+        elevation: 3;
     }
 
     .auth-form {
@@ -283,7 +294,7 @@
     }
 
     .auth-field {
-        @apply gap-2;
+        @apply gap-1.5;
     }
 
     .auth-label {
@@ -291,7 +302,7 @@
     }
 
     .auth-input {
-        @apply rounded-2xl border border-border bg-background px-4 py-4 text-base font-sans-medium text-primary;
+        @apply h-12 rounded-2xl border-[1.5px] border-border bg-background px-4 text-[15px] font-sans text-primary;
     }
 
     .auth-input-error {
@@ -306,28 +317,31 @@
         @apply text-sm font-sans-medium text-muted-foreground;
     }
 
+    /* ── Auth: Primary CTA button ── */
     .auth-button {
-        @apply mt-1 items-center rounded-2xl bg-accent py-4;
+        @apply mt-1 h-[54px] items-center justify-center rounded-2xl bg-accent;
     }
 
     .auth-button-disabled {
-        @apply bg-accent/45;
+        @apply opacity-60;
     }
 
     .auth-button-text {
-        @apply text-base font-sans-bold text-primary;
+        @apply text-[17px] font-sans-bold text-white tracking-[0.3px];
     }
 
+    /* ── Auth: Social / secondary buttons ── */
     .auth-secondary-button {
-        @apply items-center rounded-2xl border border-accent/30 bg-accent/10 py-3;
+        @apply h-[54px] items-center justify-center rounded-2xl border-[1.5px] border-border bg-card;
     }
 
     .auth-secondary-button-text {
-        @apply text-sm font-sans-semibold text-accent;
+        @apply text-[15px] font-sans-semibold text-primary;
     }
 
+    /* ── Auth: Divider ── */
     .auth-divider-row {
-        @apply my-4 flex-row items-center gap-3;
+        @apply my-6 flex-row items-center gap-3;
     }
 
     .auth-divider-line {
@@ -335,19 +349,20 @@
     }
 
     .auth-divider-text {
-        @apply text-[11px] font-sans-semibold uppercase tracking-[1px] text-muted-foreground;
+        @apply text-[13px] font-sans text-primary opacity-40;
     }
 
+    /* ── Auth: Footer link row ── */
     .auth-link-row {
-        @apply mt-5 flex-row items-center justify-center gap-1;
+        @apply mt-1 flex-row items-center justify-center;
     }
 
     .auth-link-copy {
-        @apply text-sm font-sans-medium text-muted-foreground;
+        @apply text-sm font-sans text-primary opacity-55;
     }
 
     .auth-link {
-        @apply text-sm font-sans-bold text-accent;
+        @apply text-sm font-sans-semibold text-accent;
     }
 
     .modal-overlay {
