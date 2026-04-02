@@ -14,7 +14,7 @@ import { SafeAreaView as RNSafeAreaView } from "react-native-safe-area-context";
 const SafeAreaView = styled(RNSafeAreaView);
 
 
-export default function App() {
+export default function Home() {
 
   const [expandedSubscriptionId, setExpandedSubscriptionId] = useState<string | null>(null);
 
