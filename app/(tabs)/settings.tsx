@@ -1,6 +1,7 @@
 import { HOME_USER } from "@/constants/data"
 import images from "@/constants/images"
 import "@/global.css"
+import Feather from "@expo/vector-icons/Feather"
 import { styled } from "nativewind"
 import { useState } from "react"
 import { Image, ImageSourcePropType, Pressable, ScrollView, Text, View } from 'react-native'
@@ -67,10 +68,10 @@ const Settings = () => {
           <Image source={images.avatar} className="settings-avatar" />
           <View className="settings-profile-info">
             <Text className="settings-profile-name">{HOME_USER.name}</Text>
-            <Text className="settings-profile-email">mike.harry@email.com</Text>
+            <Text className="settings-profile-email">{HOME_USER.email}</Text>
           </View>
           <Pressable className="settings-edit-button">
-            <Text className="text-primary text-lg">✏</Text>
+            <Text className="text-primary text-lg"><Feather name="edit" size={24} color="black" /></Text>
           </Pressable>
         </View>
 

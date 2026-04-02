@@ -14,6 +14,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import { StatusBar } from 'expo-status-bar'
 import '@/global.css'
 import Feather from '@expo/vector-icons/Feather'
+import AntDesign from '@expo/vector-icons/AntDesign'
 
 const SignIn = () => {
   const router = useRouter()
@@ -129,17 +130,17 @@ const SignIn = () => {
             {/* Divider */}
             <View className="auth-divider-row">
               <View className="auth-divider-line" />
-              <Text className="auth-divider-text">Or continue with</Text>
+              <Text className="auth-divider-text">Or sign in with</Text>
               <View className="auth-divider-line" />
             </View>
 
             {/* Socials */}
             <View className="gap-3">
               <TouchableOpacity className="auth-secondary-button" activeOpacity={0.7}>
-                <Text className="auth-secondary-button-text">Sign in with Google</Text>
+                <Text className="auth-secondary-button-text"><AntDesign name="google" size={20} className="mr-2 text-destructive" /> Sign in with Google</Text>
               </TouchableOpacity>
               <TouchableOpacity className="auth-secondary-button" activeOpacity={0.7}>
-                <Text className="auth-secondary-button-text">Sign in with Apple</Text>
+                <Text className="auth-secondary-button-text"><AntDesign name="apple" size={20} className="mr-2 text-primary/80" /> Sign in with Apple</Text>
               </TouchableOpacity>
             </View>
 

@@ -6,10 +6,11 @@ import { icons } from "@/constants/icons";
 import images from "@/constants/images";
 import { formatCurrency } from "@/constants/lib/utils";
 import "@/global.css";
+import AntDesign from "@expo/vector-icons/AntDesign";
 import dayjs from "dayjs";
 import { styled } from "nativewind";
 import { useState } from "react";
-import { FlatList, Image, Text, View } from "react-native";
+import { FlatList, Image, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView as RNSafeAreaView } from "react-native-safe-area-context";
 const SafeAreaView = styled(RNSafeAreaView);
 
@@ -29,8 +30,8 @@ export default function Home() {
                 <Image source={images.avatar} className="home-avatar" />
                 <Text className="home-user-name">{HOME_USER.name}</Text>
               </View>
-              <Image source={icons.add} className="home-add-icon" />
-            </View>
+              <TouchableOpacity><AntDesign name="plus-circle" size={24} color="black" /></TouchableOpacity>
+            </View> 
 
             <View className="home-balance-card">
               <Text className="home-balance-label">Balance</Text>
